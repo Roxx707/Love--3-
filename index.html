@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para: Mi bello Rayito ♡</title>
+
+<style>
+:root {
+  --fondo: #10080f;
+  --rosa: #6fb2ff;
+  --rosa-claro: #b1fff8;
+  --crema: #ffe8ef;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--crema);
+  background:
+    radial-gradient(ellipse at 50% 30%, #71204455, transparent 60%),
+    linear-gradient(150deg, #10080f, #1a0b18, #0c080d);
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.pantalla {
+  width: min(100%, 760px);
+  text-align: center;
+  animation: aparecer .8s ease both;
+}
+
+.oculto { display: none !important; }
+
+.etiqueta {
+  color: #a0a5e9;
+  text-transform: uppercase;
+  letter-spacing: .25em;
+  font: 11px/1.7 Arial, sans-serif;
+}
+
+h1 {
+  color: #ffe0ea;
+  font-size: clamp(28px, 5vw, 43px);
+  font-weight: normal;
+}
+
+.subtitulo {
+  color: #d8b6c4;
+  font: 14px/1.8 Arial, sans-serif;
+}
+
+.corazon {
+  width: min(100%, 540px);
+  margin: 10px auto;
+  filter: drop-shadow(0 0 15px #ff4c8425);
+}
+
+svg {
+  width: 100%;
+  display: block;
+  overflow: visible;
+}
+
+.contorno {
+  fill: #75133b19;
+  stroke: #ff729e;
+  stroke-width: 4;
+  stroke-linejoin: round;
+  animation: brillo 2.8s ease-in-out infinite;
+}
+
+.palabra {
+  font: bold 25px Arial, sans-serif;
+  letter-spacing: 1px;
+  fill: #ff9fbd;
+  opacity: .9;
+  animation: flotar var(--duracion) ease-in-out infinite alternate;
+  animation-delay: var(--retraso);
+}
+
+.palabra:nth-child(3n) { fill: #ffd0df; }
+.palabra:nth-child(4n) { fill: #ff6f9f; }
+
+.infinito {
+  font: bold 120px Georgia, serif;
+  fill: #fff0f5;
+  stroke: #ff7fa7;
+  stroke-width: 1px;
+  paint-order: stroke;
+  filter: drop-shadow(0 0 10px #ff74a3);
+  animation: latido 2.3s ease-in-out infinite;
+}
+
+.texto-centro {
+  font: bold 19px Arial, sans-serif;
+  letter-spacing: 3px;
+  fill: #fff0f5;
+  filter: drop-shadow(0 0 7px #ff7da9);
+}
+
+.firma {
+  color: #ffb8cd;
+  font: 12px Arial, sans-serif;
+  letter-spacing: .16em;
+}
+
+button {
+  border: 1px solid #d85a87;
+  color: #fff0f5;
+  background: linear-gradient(135deg, #7e2448, #4c1934);
+  border-radius: 999px;
+  padding: 13px 25px;
+  font: 14px Arial, sans-serif;
+  cursor: pointer;
+  margin: 18px 6px 0;
+  transition: transform .2s, background .2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  background: #8d2a50;
+}
+
+.poema-tarjeta, .final-tarjeta {
+  max-width: 650px;
+  margin: 22px auto 0;
+  padding: clamp(20px, 4vw, 34px);
+  border: 1px solid #ff8eb347;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #4f183378, #170c16b8);
+  box-shadow: 0 15px 45px #0003;
+}
+
+.poema {
+  color: #f8dce6;
+  font-size: clamp(16px, 2.5vw, 19px);
+  line-height: 1.9;
+}
+
+.poema p { margin-bottom: 22px; }
+
+.mensaje-final {
+  color: #f8dce6;
+  font-size: clamp(16px, 2.5vw, 19px);
+  line-height: 1.9;
+  white-space: pre-line;
+}
+
+.mensaje-final strong {
+  color: #ffadc6;
+  font-weight: normal;
+}
+
+.pie {
+  color: #a98595;
+  font: 11px/1.6 Arial, sans-serif;
+  margin-top: 18px;
+}
+
+@keyframes flotar {
+  from { transform: translate(-2px, 1px); }
+  to { transform: translate(2px, -2px); }
+}
+
+@keyframes brillo {
+  0%, 100% { filter: drop-shadow(0 0 3px #ff599547); }
+  50% { filter: drop-shadow(0 0 12px #ff59999e); }
+}
+
+@keyframes latido {
+  0%, 100% { opacity: .86; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.035); }
+}
+
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(9px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- PARTE 1: CORAZÓN DE LOVE YOU -->
+
+<main class="pantalla" id="pantallaCorazon">
+  <div class="etiqueta">Un pequeño mundo hecho para ti</div>
+  <h1>Para ti, Mi corazón de melón jsjs ♡</h1>
+  <p class="subtitulo">
+    Tu mejor que nadie sabe que no expresarme, asi que bueno aqui ando intentando mostrarte algo que te haga sonreír.
+  </p>
+
+  <div class="corazon">
+    <svg viewBox="0 0 600 540"
+         role="img"
+         aria-label="Corazón de palabras LOVE YOU e infinito">
+
+      <defs>
+        <clipPath id="mascaraCorazon">
+          <path d="M300 490
+          C258 449 65 319 65 178
+          C65 83 132 39 202 48
+          C250 53 282 83 300 118
+          C318 83 350 53 398 48
+          C468 39 535 83 535 178
+          C535 319 342 449 300 490 Z"/>
+        </clipPath>
+      </defs>
+
+      <path class="contorno" d="M300 490
+      C258 449 65 319 65 178
+      C65 83 132 39 202 48
+      C250 53 282 83 300 118
+      C318 83 350 53 398 48
+      C468 39 535 83 535 178
+      C535 319 342 449 300 490 Z"/>
+
+      <g id="palabras" clip-path="url(#mascaraCorazon)"></g>
+
+      <text class="infinito"
+            x="300" y="276"
+            text-anchor="middle">∞</text>
+
+      <text class="texto-centro"
+            x="300" y="316"
+            text-anchor="middle">I LOVE YOU</text>
+    </svg>
+  </div>
+
+  <p class="firma">CON TODO MI CARIÑO · ♡</p>
+
+  <button onclick="mostrar('pantallaPoema')">
+    Continuar ♡
+  </button>
+
+  <div class="pie">Hecho con cariño, palabra por palabra.</div>
+</main>
+
+<!-- PARTE 2: POEMA MELANCÓLICO -->
+
+<section class="pantalla oculto" id="pantallaPoema">
+  <div class="etiqueta">Lo que a veces no sé decirte</div>
+  <h1>Un poquito de mi corazón</h1>
+
+  <div class="poema-tarjeta">
+    <div class="poema">
+      <p>
+        No sé qué nombre tendrá nuestra historia,
+        ni qué lugar nos guarda el destino;
+        solo sé que, entre tantas incertidumbres,
+        me gusta coincidir contigo en el camino.
+      </p>
+
+      <p>
+        A veces me asusta pensar en los finales,
+        en todo aquello que no puedo controlar,
+        porque hay personas que se vuelven tan importantes
+        que hasta perderlas sin tenerlas llega a doler más.
+      </p>
+
+      <p>
+        No puedo prometerte una eternidad,
+        ni asegurar qué nos depara el mañana;
+        pero quisiera que, incluso en tus días grises,
+        nunca te faltara una razón para tener esperanza.
+      </p>
+
+      <p>
+        Y si alguna vez la vida nos lleva lejos,
+        o nuestros caminos dejan de coincidir,
+        ojalá recuerdes que, entre tantas personas,
+        hubo alguien que fue feliz de tenerte aquí.
+      </p>
+
+      <p>
+        No sé si existe un infinito para nosotros,
+        ni si el tiempo nos permitirá llegar hasta el final;
+        pero, si pudiera guardar algo de este instante,
+        guardaría las ganas de verte sonreír una vez más. ♡
+      </p>
+    </div>
+  </div>
+
+  <button onclick="mostrar('pantallaFinal')">
+    Una cosita más…
+  </button>
+</section>
+
+<!-- PARTE 3: MENSAJE PARA QUE SE CUIDE -->
+
+<section class="pantalla oculto" id="pantallaFinal">
+  <div class="etiqueta">Antes de que te vayas</div>
+  <h1>Cuídate mucho, ¿sí? ♡</h1>
+
+  <div class="final-tarjeta">
+    <div class="mensaje-final">
+Y bueno, mi niño travieso jsjs… ♡
+
+Dejando de lado todas estas cursilerías las cuales no se si te gustan jsjsjs, quiero que te cuides mucho, ¿sí? Descansa, toma agüita, come bien y no te exijas más de la cuenta.
+
+Si sigues sintiéndote mal, busca atención médica y no lo dejes pasar. Ojalá pudiera hacer que te sintieras mejor de inmediato, pero, como no puedo, al menos quiero recordarte que tu bienestar importa mucho.
+
+Espero que pronto te sientas mejor y que puedas volver a sonreír sin sentirte mal.
+
+<strong>Cuídate mucho, por favor. No olvides que te amodoroo muchoteeeeee. ♡</strong>
+    </div>
+
+    <h1 style="color:#ff8fb3;">∞</h1>
+  </div>
+
+  <button onclick="mostrar('pantallaCorazon')">
+    Volver al corazón ♡
+  </button>
+
+  <div class="pie">
+    No tienes que responder nada. Solo quería dejarte esto.
+  </div>
+</section>
+
+<script>
+// Creamos las palabras de forma ordenada.
+// La máscara SVG impide que salgan de la silueta del corazón.
+const grupo = document.getElementById("palabras");
+const espacioSVG = "http://www.w3.org/2000/svg";
+
+let semilla = 173;
+
+function aleatorio() {
+  semilla = (semilla * 9301 + 49297) % 233280;
+  return semilla / 233280;
+}
+
+for (let y = 72; y <= 475; y += 29) {
+  for (let x = 52; x <= 548; x += 91) {
+    const palabra = document.createElementNS(espacioSVG, "text");
+
+    palabra.setAttribute("x", x + (aleatorio() * 26 - 13));
+    palabra.setAttribute("y", y + (aleatorio() * 8 - 4));
+    palabra.setAttribute("text-anchor", "middle");
+    palabra.setAttribute("class", "palabra");
+
+    palabra.style.setProperty(
+      "--duracion",
+      (2.8 + aleatorio() * 3.8).toFixed(2) + "s"
+    );
+
+    palabra.style.setProperty(
+      "--retraso",
+      (-aleatorio() * 5).toFixed(2) + "s"
+    );
+
+    palabra.textContent = "LOVE YOU";
+    grupo.appendChild(palabra);
+  }
+}
+
+// Cambia de pantalla sin recargar la página.
+function mostrar(id) {
+  document.querySelectorAll(".pantalla").forEach(pantalla => {
+    pantalla.classList.add("oculto");
+  });
+
+  const siguiente = document.getElementById(id);
+  siguiente.classList.remove("oculto");
+
+  siguiente.style.animation = "none";
+  void siguiente.offsetWidth;
+  siguiente.style.animation = "";
+
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+</script>
+
+</body>
+</html>
